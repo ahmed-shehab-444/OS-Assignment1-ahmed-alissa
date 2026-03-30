@@ -42,14 +42,23 @@ class Process implements Runnable {
     private long totalWaitingTime; // Total time spent waiting in queue (in milliseconds)
     private long lastReadyTime; // Last time the process entered the ready queue
 
-    // Constructor to initialize the process with name, burst time, and time quantum
-    public Process(String name, int burstTime, int timeQuantum) {
+   
+    // Constructor to initialize the process with name, burst time, time quantum, and priority
+    // FEATURE 1: Added priority parameter to constructor
+    // FEATURE 3: Initialize timing fields
+    public Process(String name, int burstTime, int timeQuantum, int priority) {
         this.name = name;
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
+        this.priority = priority; // FEATURE 1: Initialize priority
+        
+        // FEATURE 3: Initialize timing fields
+        this.creationTime = System.currentTimeMillis(); // Record when process is created
+        this.totalWaitingTime = 0; // Start with 0 waiting time
+        this.lastReadyTime = this.creationTime; // Initially, process is ready at creation
     }
-
+    
     // This method will be called when the thread for this process is started
     @Override
     public void run() {
