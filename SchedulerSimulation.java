@@ -199,6 +199,15 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
+
+     // FEATURE 2: Static counter for context switches
+    // Incremented each time a new process starts running
+    private static int contextSwitchCount = 0;
+
+    // FEATURE 3: List to store all completed processes for summary
+    private static List<Process> completedProcesses = new ArrayList<>();
+
+    
     public static void main(String[] args) {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
