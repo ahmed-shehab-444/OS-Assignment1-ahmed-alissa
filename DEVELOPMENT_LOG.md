@@ -87,15 +87,15 @@ Document your development process as you work on the assignment. Add entries sho
 ---
 
 ### Entry 6 - [30/03/2026]
-**What I did: recorded the video for the **: 
+**What I did: recorded the video to demonstrate my work  **: 
 
-**Details**: 
+****: 
 
-**Challenges**: 
+**Challenges: making a video long enough to cover all points of the video.**: 
 
-**Solution**: 
+**Solution: organized my thoughts and wrote them my note book to help me through  **: 
 
-**Time spent**: 
+**Time spent 30-45 minutes **: 
 
 ---
 
