@@ -287,6 +287,16 @@ public class SchedulerSimulation {
         while (!processQueue.isEmpty()) {
             // Get the next thread from the queue (FIFO)
             Thread currentThread = processQueue.poll(); // Dequeues the next thread
+
+             // FEATURE 2: Increment context switch counter when a new process starts running
+            contextSwitchCount++;
+
+             // Retrieve the process associated with the thread from the map
+            Process process = processMap.get(currentThread);
+            
+            // FEATURE 3: Update waiting time for this process before it runs
+            // Calculate how long it waited in queue since it was last added
+            process.updateWaitingTime();
             
             // Print the current process queue (list of process IDs in the queue)
             System.out.println(Colors.BOLD + Colors.MAGENTA + "┌─ Ready Queue " + "─".repeat(65) + Colors.RESET);
@@ -321,6 +331,11 @@ public class SchedulerSimulation {
             if (!process.isFinished()) {
                 // If the process still has remaining time, check if there are more processes in queue
                 if (!processQueue.isEmpty()) {
+
+                     // FEATURE 3: Set last ready time when re-entering queue
+                    // This marks when the process started waiting again
+                    process.setLastReadyTime(System.currentTimeMillis());
+                    
                     // Re-enqueue the process to give it another chance to run in the next round
                     addProcessToQueue(process, processQueue, processMap);
                 } else {
@@ -329,7 +344,15 @@ public class SchedulerSimulation {
                                       Colors.RESET + Colors.YELLOW + " is the last process → running to completion" + 
                                       Colors.RESET);
                     process.runToCompletion(); // Run until the process completes
-                }
+
+                      // FEATURE 3: Add to completed processes list for summary
+                    completedProcesses.add(process);
+                    
+                } else { 
+                // FEATURE 3: Process finished, add to completed list for summary
+                completedProcesses.add(process);
+            }
+            
             }
         }
         
