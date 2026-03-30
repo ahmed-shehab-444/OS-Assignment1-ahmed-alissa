@@ -157,7 +157,41 @@ class Process implements Runnable {
     public int getRemainingTime() {
         return remainingTime;
     }
+ 
+    // FEATURE 1: Getter for priority
+    public int getPriority() {
+        return priority;
+    }
+    
+    // FEATURE 3: Getter for creation time
+    public long getCreationTime() {
+        return creationTime;
+    }
+    
+    // FEATURE 3: Getter for total waiting time
+    public long getTotalWaitingTime() {
+        return totalWaitingTime;
+    }
+    
+    // FEATURE 3: Getter for last ready time
+    public long getLastReadyTime() {
+        return lastReadyTime;
+    }
+    
+    // FEATURE 3: Method to update waiting time when process is about to run
+    // Call this when process starts executing to calculate how long it waited
+    public void updateWaitingTime() {
+        long currentTime = System.currentTimeMillis();
+        long waitTime = currentTime - lastReadyTime; // Time spent waiting since last added to queue
+        totalWaitingTime += waitTime;
+    }
 
+    
+    // FEATURE 3: Method to set last ready time when process re-enters queue
+    public void setLastReadyTime(long time) {
+        this.lastReadyTime = time;
+    }
+    
     // Check if the process has finished (i.e., no remaining time)
     public boolean isFinished() {
         return remainingTime <= 0;
