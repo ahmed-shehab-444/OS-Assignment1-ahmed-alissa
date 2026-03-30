@@ -12,24 +12,10 @@ Document your development process as you work on the assignment. Add entries sho
 ---
 ## Your Development Log:
 
-### Entry 1 - [April 1, 2026, 2:30 PM]
-**What I did**: Forked the repository and set up my student ID
-
-**Details**: 
-- Created GitHub account with university email
-- Forked the starter repository
-- Changed student ID on line 92 to my actual ID (441234567)
-- Compiled and ran the program successfully
-
-**Challenges**: Had to install JDK first because javac wasn't recognized
-
-**Solution**: Downloaded JDK 17 from Oracle website and set PATH variable
-
-**Time spent**: 30 minutes
 
 ---
 
-### Entry 2 - [15/03/2026]
+### Entry 1 - [15/03/2026]
 **i created the git account for the project **: 
 
 **- i installed the vs code studio and installed sevral extensions to aid in use and            development **: 
@@ -40,11 +26,11 @@ Document your development process as you work on the assignment. Add entries sho
 
 ** solution: i looked for the extention and installed it succesfully **: 
 
-**time spent: aproximtally 1 hour**: 
+**time spent: aproximtally 45 minutes**: 
 
 ---
 
-### Entry 3 - [17/03/2026]
+### Entry 2 - [17/03/2026]
 ** wrote the code for feature 1 and 3 **: 
 
 ** - i started with 1 and 3 as they were related to each other code wise.
@@ -59,7 +45,7 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 4 - [18/03/2026]
+### Entry 3 - [18/03/2026]
 **i wrote the code for feature 2 **: 
 
 ** i started write the code for feature 2 and make sure it was **: 
@@ -72,7 +58,7 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 5 - [27/03/2026]
+### Entry 4 - [27/03/2026]
 ** -i cleaned my code structure and made it readable 
    -added comments to explain the features function *: 
 
@@ -86,7 +72,7 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 6 - [30/03/2026]
+### Entry 5 - [30/03/2026]
 **What I did: recorded the video to demonstrate my work  **: 
 
 ****: 
@@ -103,10 +89,10 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Summary
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [ 6 hours aproximtaly ] 
 
-**Most challenging part**: 
+**Most challenging part: doing the code offeature 1 and 3 **: 
 
-**Most interesting learning**: 
+**Most interesting learning : the priority field **: 
 
-**What I would do differently next time**: 
+**What I would do differently next time: i would've worked on each feature seprately to decrease work load**: 
